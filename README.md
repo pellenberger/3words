@@ -12,3 +12,5 @@ https://www.firebase.com/docs/web/guide/user-auth.html
 https://www.firebase.com/docs/web/libraries/angular/guide/user-auth.html
 * AngularFire $firebaseAuth  
 https://www.firebase.com/docs/web/libraries/angular/api.html#angularfire-users-and-authentication
+* Firebase example  
+https://github.com/firebase/angularfire-seed
