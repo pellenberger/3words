@@ -10,21 +10,28 @@
  */
 angular
   .module('3wordsApp', [
-    'ngRoute'
+    'ngRoute',
+    'firebase'
   ])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
+        templateUrl: 'views/home.html',
+        controller: 'HomeCtrl',
+        controllerAs: 'home'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
+      .when('/login', {
+        templateUrl: 'views/login.html',
+        controller: 'LoginCtrl',
+        controllerAs: 'login'
       })
       .otherwise({
         redirectTo: '/'
       });
+  }
+  )
+  .run(function($rootScope, FirebaseService) {
+    FirebaseService.getAuth().$onAuth(function(authData) {
+      $rootScope.authData = authData;
+    });
   });
