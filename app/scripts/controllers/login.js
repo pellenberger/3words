@@ -8,11 +8,12 @@
  * Controller of the 3wordsApp
  */
 angular.module('3wordsApp')
-  .controller('LoginCtrl', function ($rootScope, $scope, FirebaseService) {
+  .controller('LoginCtrl', function ($rootScope, $scope, $location, FirebaseService) {
 
     $scope.loginGoogle = function() {
       FirebaseService.getAuth().$authWithOAuthPopup("google").then(function(authData) {
         console.log("Logged in as:", authData);
+        $location.path("/home");
       }).catch(function(error) {
         console.error("Authentication failed:", error);
       });

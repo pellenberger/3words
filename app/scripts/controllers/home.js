@@ -8,6 +8,8 @@
  * Controller of the 3wordsApp
  */
 angular.module('3wordsApp')
-  .controller('HomeCtrl', function () {
+  .controller('HomeCtrl', function (currentAuth) {
+
+    console.log(currentAuth);
 
   });
