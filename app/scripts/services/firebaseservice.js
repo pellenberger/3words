@@ -10,13 +10,15 @@
 angular.module('3wordsApp')
   .service('FirebaseService', function ($rootScope, $firebaseAuth) {
 
-    var ref = new Firebase("https://3words.firebaseio.com");
+    var baseUrl = "https://3words.firebaseio.com/";
+
+    var ref = new Firebase(baseUrl);
     var auth = $firebaseAuth(ref);
 
     return {
 
-      getRef: function() {
-        return ref;
+      getUserRef: function(userId) {
+        return new Firebase(baseUrl + "users/" + userId);
       },
 
       getAuth: function() {
