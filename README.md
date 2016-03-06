@@ -1,12 +1,16 @@
 # 3words
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.15.1.
+## Firebase Authentication
 
-## Build & development
-
-Run `grunt` for building and `grunt serve` for preview.
-
-## Testing
-
-Running `grunt test` will run the unit tests with karma.
+* Google  
+https://www.firebase.com/docs/web/guide/login/google.html
+* User Based Security   
+https://www.firebase.com/docs/security/guide/user-security.html
+* User Authentication (javascript)  
+https://www.firebase.com/docs/web/guide/user-auth.html
+* User Authentication (AngularFire)  
+https://www.firebase.com/docs/web/libraries/angular/guide/user-auth.html
+* AngularFire $firebaseAuth  
+https://www.firebase.com/docs/web/libraries/angular/api.html#angularfire-users-and-authentication
+* Firebase example  
+https://github.com/firebase/angularfire-seed
