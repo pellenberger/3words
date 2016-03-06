@@ -14,3 +14,26 @@ https://www.firebase.com/docs/web/libraries/angular/guide/user-auth.html
 https://www.firebase.com/docs/web/libraries/angular/api.html#angularfire-users-and-authentication
 * Firebase example  
 https://github.com/firebase/angularfire-seed
+
+## Firebase security
+
+Security rules :    
+
+```
+{
+    "rules": {
+        ".read": false,
+        ".write": false,
+        
+        "users": {
+          "$user_id": {
+            ".read": "$user_id === auth.uid",
+            ".write": "$user_id === auth.uid"
+            
+          }          
+        }
+    }
+}
+```   
+
+Users can only access their own data.
